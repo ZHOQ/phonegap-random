@@ -1,17 +1,11 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.notification);
-}
-
-$(document).on("pagecreate","#pageone",function(){
-  $('#submitButton').on("click", function(){
+$(document).on("pagecreate", "#pageone", function () {
+  $('#submitButton').on("click", function () {
     var rand = random();
       if(rand){
-          
           navigator.notification.beep(1);
           
-      }else{
-          
+      }else {
+         
           navigator.notification.beep(2);
       }
   });            
